@@ -574,9 +574,23 @@
             <div class="group bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-premium overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
                 data-aos="fade-up" data-aos-delay="100">
                 <div>
-                    <!-- Interface preview: swaps with site theme -->
-                    <div class="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-950">
-                        <img src="linko-light.png" alt="LINKO interface – light mode"
+                    <!-- Interface preview: both modes in one frame -->
+                    <div class="relative h-56 overflow-hidden bg-gradient-to-br from-slate-100 to-slate-300 dark:from-slate-800 dark:to-slate-950">
+                        <!-- Light mode -->
+                        <div class="absolute top-4 left-4 w-[76%] rounded-lg overflow-hidden shadow-lg ring-1 ring-black/10 group-hover:-translate-y-1 transition-transform duration-500">
+                            <img src="linko-light.png" alt="LINKO interface – light mode" class="block w-full h-auto" loading="lazy">
+                            <span class="absolute top-1.5 left-1.5 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-white/90 text-slate-800">
+                                <i class="fa-solid fa-sun"></i> Light
+                            </span>
+                        </div>
+                        <!-- Dark mode (in front) -->
+                        <div class="absolute bottom-4 right-4 w-[76%] rounded-lg overflow-hidden shadow-xl ring-1 ring-white/10 group-hover:translate-y-1 transition-transform duration-500">
+                            <img src="linko-dark.png" alt="LINKO interface – dark mode" class="block w-full h-auto" loading="lazy">
+                            <span class="absolute top-1.5 left-1.5 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-slate-900/90 text-white">
+                                <i class="fa-solid fa-moon"></i> Dark
+                            </span>
+                        </div>
+                    </div>                        <img src="linko-light.png" alt="LINKO interface – light mode"
                             class="block dark:hidden w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-500"
                             loading="lazy">
                         <img src="linko-dark.png" alt="LINKO interface – dark mode"
